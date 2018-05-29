@@ -527,16 +527,19 @@ ews.summary<-function(tstemp,winlen,step.size,timeCT){
 }
 
 # detrendTS__________________________________________________________________________
-# detrend time series using linear, gaussian, lowess, or no detrending
-# oTS is a 2 col time series with [,1] as time and [,2] as ecological variable
-# method: should detrending be done using "none", "linear" (using lm), "gaussian" (using ksmooth function), or "lowess" (using loess function)
-# bandwidth: bandwidth to use for gaussian detrending. default is NULL, in which case bandwidth is optimized using bw.nrd0 (following the earlywarnings package)
-# span: span to use for loess smoothing. default is 25/100 (following the earlywarnings package)
-# degree: degree to use for loess smoothign. default is 2 (following the earlywarnings package)
-# output:
-# a 2 col matrix with [,1] as time, and [,2] as detrended ecological variable
+# detrend time series using linear, gaussian, lowess, or no detrending. Initial function form inspried by the earlywarnings::generic_ews function
 
 detrendTS<-function(oTS,method,bandwidth=NULL,span=NULL, degree=NULL){
+	
+	# oTS = generally, a 2 col matrix, with [,1] as time and [,2] as ecological variable. An untransformed single run of the GW model
+	# method = should detrending be "linear" (using lm), "gaussian" (using ksmooth function), "lowess" (using loess function), or "none"?
+	# bandwidth = bandwidth to use for gaussian detrending. Default is NULL, in which case bandwidth is optimized using bw.nrd0 (following the earlywarnings package)
+	# span = span to use for loess smoothing. default is 25/100 (following the earlywarnings package)
+	# degree = degree to use for loess smoothign. default is 2 (following the earlywarnings package)
+	
+	# RETURN:
+	# a 2 col matrix with [,1] as time, and [,2] as detrended ecological variable
+	
 	TS<-oTS[,2]
 	timeindex<-oTS[,1]
 	if (method=="lowess") {
