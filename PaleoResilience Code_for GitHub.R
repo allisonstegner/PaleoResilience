@@ -1,21 +1,20 @@
-#######################################
-# Paleoecological Resilience Indicator functions
+######################################################################
+# Paleoecological Resilience Indicator full code to run simulations
 # Stegner et al. 
 # updated 29 May 2018
-#######################################
+######################################################################
 
-# PACKAGES  #####################################################################
+# LOAD PACKAGES  #####################################################
 library(breakpoint)
 library(analogue)
 library(neotoma)
 require(stats)
 require(moments)
 
-# used to generate the Lake West Okoboji age model
-#library(Bchron) 
+# library(Bchron) # to generate the Lake West Okoboji age model
 
-####FUNCTIONS###################################################################
-# estBetaParam_____________________________________________________________
+####FUNCTIONS#########################################################
+# estBetaParam________________________________________________________
 # given a certain mean fire mortaility and standard deviation, this function estmates alpha and beta parameters
 
 estBetaParams <- function(mu, var) {
