@@ -1,7 +1,7 @@
 #######################################
 # Paleoecological Resilience Indicator functions
 # Stegner et al. 
-# updated 21 May 2018
+# updated 29 May 2018
 #######################################
 
 # PACKAGES  #####################################################################
