@@ -22,7 +22,7 @@ beta_ps<-estBetaParams(mu=0.15, var=0.015)
 
 # Set taphonomic parameters______________________________
 exRStime=6000
-nreps=5
+nreps=100
 nsamp=200
 AC.buff=0.1
 samp.freq2=0.4
