@@ -3,7 +3,7 @@
 library(breakpoint)
 library(moments)
 
-source('~/Grass-Wood model_final 30June2018.R')
+source('Grass-Wood model 30June2018.R')
 
 # FUNCTIONS#####################################################################
 # std.sd___________________________________________________________________________
@@ -545,12 +545,12 @@ multi.ks.test<-function(Xct,Xdc,Xrs,Xnc,ts,indicator, p.correct,alpha){
 	
 ##########
 # import Woody Cover data
-steel<-read.csv("~/Steel Lake.csv")
+steel<-read.csv("Steel Lake.csv")
 tree<-steel[,4]/100
 chron<-steel[,1]
 
 #import quartz+feldspar data (only necessary to draw figure)
-SLqf<-read.csv("~SLqf.csv")
+SLqf<-read.csv("SLqf.csv")
 
 # Calculate depostion rates
 depth<-steel[,6]
