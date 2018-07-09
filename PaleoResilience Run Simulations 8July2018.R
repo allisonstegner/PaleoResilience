@@ -17,6 +17,7 @@ K_Pulse_amt = -0.4
 pulse_time = 1000
 sigma_sd = 0.005
 V0 = 1
+phi = 0.05
 beta_ps<-estBetaParams(mu=0.15, var=0.015)
 
 # Set taphonomic parameters______________________________
